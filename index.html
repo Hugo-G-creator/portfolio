@@ -2,130 +2,204 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Portfolio - Création d'une enceinte Bluetooth</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapport de Projet | Hugo Girard - ENSIM 5A</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
+        :root {
+            --ensim-blue: #0056b3;
+            --tech-gray: #2c3e50;
+            --bg-light: #f9f9f9;
         }
 
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* En-tête académique */
         header {
-            background: linear-gradient(135deg, #1f1f1f, #3a3a3a);
+            background: linear-gradient(135deg, var(--tech-gray), #1a1a1a);
             color: white;
-            padding: 60px 20px;
+            padding: 80px 20px;
             text-align: center;
         }
 
+        .subtitle {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            color: #00aaff;
+            font-weight: bold;
+        }
+
         section {
-            padding: 50px 20px;
+            padding: 40px 20px;
             max-width: 900px;
             margin: auto;
         }
 
+        /* Titres avec soulignement stylisé */
         h2 {
-            color: #222;
-            border-left: 5px solid #0077ff;
-            padding-left: 10px;
-        }
-
-        .card {
-            background: white;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-
-        .btn {
+            border-bottom: 3px solid var(--ensim-blue);
             display: inline-block;
-            padding: 10px 20px;
-            background: #0077ff;
+            padding-bottom: 5px;
+            margin-bottom: 30px;
+            color: var(--tech-gray);
+        }
+
+        /* Conteneur de contenu (Cartes) */
+        .content-block {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        /* Mise en page des images */
+        .figure {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .figure img {
+            max-width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            transition: transform 0.3s;
+        }
+        
+        .figure img:hover {
+            transform: scale(1.02); /* Petit effet de zoom au survol */
+        }
+
+        figcaption {
+            margin-top: 10px;
+            font-size: 0.85rem;
+            color: #666;
+            font-style: italic;
+        }
+
+        /* Liste de compétences style "Badges" */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .skill-badge {
+            background: var(--ensim-blue);
             color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 15px;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
         }
 
         footer {
+            background: #1a1a1a;
+            color: #888;
             text-align: center;
-            padding: 20px;
-            background: #222;
-            color: white;
+            padding: 30px;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive : s'adapte aux tablettes et mobiles */
+        @media (max-width: 600px) {
+            header { padding: 40px 10px; }
+            h1 { font-size: 1.5rem; }
         }
     </style>
 </head>
-
 <body>
 
 <header>
-    <h1>Projet : Enceinte Bluetooth</h1>
-    <p>Conception du caisson de l'enceinte sous SolidWorks</p>
+    <p class="subtitle">Semaine de l'Innovation - 5ème Année</p>
+    <h1>Conception & Fabrication d'une Enceinte Bluetooth</h1>
+    <p>Par <strong>Hugo Girard</strong> - Élève Ingénieur à l'ENSIM</p>
 </header>
 
 <section>
-    <h2>📌 Présentation du projet</h2>
-    <div class="card">
+    <h2>1. Contexte du Projet</h2>
+    <div class="content-block">
         <p>
-            Ce projet consiste à concevoir et fabriquer une enceinte Bluetooth avec du matériel disponible à l'ENSIM
-            Le boîtier a été entièrement modélisé sous SolidWorks puis imprimé en 3D.
+            Ce projet s'inscrit dans une démarche de prototypage rapide. L'objectif était de concevoir un système audio complet, de la modélisation mathématique du volume acoustique jusqu'à la fabrication additive.
         </p>
+        <div class="skills-container">
+            <span class="skill-badge">Gestion de projet</span>
+            <span class="skill-badge">CAO</span>
+            <span class="skill-badge">Acoustique</span>
+        </div>
     </div>
 </section>
 
 <section>
-    <h2>🛠️ Conception CAO</h2>
-    <div class="card">
+    <h2>2. Étude Technique & CAO</h2>
+    <div class="content-block">
+        <h3>Calculs Acoustiques</h3>
         <p>
-            - Modélisation complète du caisson Bass-Reflex avec le logiciel Solidworks <BR>
-            - Conception des supports internes  <BR>
-            - Conception d'une pièce centrale de diffusion d'onde sonore inspirées d'enceintes 360°  <BR>
-            
-            <center><img src="screenSDW.png" alt="screenSDW" width="800"></center>
-            <em>Conception du boîtier bass reflex calculé avec l'outil disponible sur https://www.petoindominique.fr/php/accueil.php </em>
-            <center><img src="screenSDW2.png" alt="screenSDW2" width="800"></center>
-            <em>Conception d'une pièce centrale de diffusion d'onde sonore inspirées d'enceintes 360°</em>
-            
+            Pour garantir une réponse en fréquence de qualité, le volume interne a été dimensionné selon le principe du <strong>Bass-Reflex</strong>. Les calculs ont été vérifiés via les outils de référence (Pétoin Dominique) pour accorder l'évent à la fréquence de résonance du haut-parleur.
         </p>
+        
+        <div class="figure">
+            <img src="screenSDW.png" alt="Modélisation SolidWorks">
+            <figcaption>Figure 1 : Modélisation du châssis principal sous SolidWorks - Vue en coupe.</figcaption>
+        </div>
+
+        <h3>Innovation Design</h3>
+        <p>
+            L'originalité du projet réside dans l'intégration d'une <strong>pièce de diffusion conique</strong>. Ce composant permet de transformer une source directionnelle en une diffusion omnidirectionnelle (360°).
+        </p>
+
+        <div class="figure">
+            <img src="screenSDW2.png" alt="Détail Diffuseur">
+            <figcaption>Figure 2 : Conception du diffuseur acoustique supérieur.</figcaption>
+        </div>
+    </div>
+</section>
+
+
+
+<section>
+    <h2>3. Fabrication & Slicing</h2>
+    <div class="content-block">
+        <p>
+            Le passage du modèle virtuel au monde réel a été réalisé par <strong>Impression 3D (FDM)</strong>. 
+        </p>
+        <ul>
+            <li><strong>Optimisation :</strong> Réglage du <em>remplissage (infill)</em> à 20% en motif gyroïde pour allier légèreté et rigidité structurelle.</li>
+            <li><strong>Matériau :</strong> Utilisation du PLA pour sa stabilité dimensionnelle.</li>
+        </ul>
+        <div class="figure">
+            <img src="SceenBambu.png" alt="Slicing Bambu Studio">
+            <figcaption>Figure 3 : Paramétrage du Slicer Bambu Studio pour optimisation des supports.</figcaption>
+        </div>
     </div>
 </section>
 
 <section>
-    <h2>🖨️ Impression 3D</h2>
-    <div class="card">
+    <h2>4. Bilan & Développement Web</h2>
+    <div class="content-block">
         <p>
-            
-            - Matériau : PLA et ABS en fonction de la disponibilité <BR>  
-            - Finition : Ponçage + Peinture  <BR>
-            - Logiciel : Parametrages du slicer pour oprimisation du temps d'impréssion<BR>
-            <BR>
-
-            <center><img src="SceenBambu.png" alt="bambu studio" width="800"></center>
+            En complément de la partie ingénierie, ce projet a été l'occasion d'initier une démarche de <strong>documentation numérique</strong> :
         </p>
-    </div>
-</section>
-
-<section>
-    <h2>🔊 Résultat final</h2>
-    <div class="card">
-        <p>
-            L’enceinte offre un son clair avec de bonnes basses.
-            Le design est compact et totalement personnalisé.
-        </p>
-        <a href="#" class="btn">Voir les images du projet</a>
-    </div>
-</section>
-
-<section>
-    <h2>📞 Contact</h2>
-    <div class="card">
-        <p>Email : hugo.girard.etu@univ-lemans.fr</p>
+        <ul>
+            <li>Apprentissage du langage <strong>HTML5/CSS3</strong> pour la création de ce portfolio.</li>
+            <li>Utilisation de <strong>GitHub</strong> pour l'hébergement et le versionnage du projet.</li>
+            <li>Interaction avec des outils d'<strong>IA (Gemini)</strong> pour l'aide au débogage et l'optimisation du code.</li>
+        </ul>
     </div>
 </section>
 
 <footer>
-    © 2026 - Hugo G. | Portfolio Projet Enceinte Bluetooth
+    <p>Projet 5A - ENSIM - 2026</p>
+    <p>Contact : <a href="mailto:hugo.girard.etu@univ-lemans.fr" style="color:#00aaff;">hugo.girard.etu@univ-lemans.fr</a></p>
 </footer>
 
 </body>
