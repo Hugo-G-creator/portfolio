@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rapport de Projet | Hugo Girard - ENSIM 5A</title>
+    <title>Portfolio | Hugo Girard - ENSIM 5A</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     
     <style>
@@ -129,32 +129,36 @@
     <h2>1. Contexte du Projet</h2>
     <div class="content-block">
         <p>
-            Ce projet s'inscrit dans une démarche de prototypage rapide. L'objectif était de concevoir un système audio complet, de la modélisation mathématique du volume acoustique jusqu'à la fabrication additive.
+            Ce projet s'inscrit dans une démarche de prototypage lors de la semaine innovation. L'objectif était de concevoir une enceinte bluetooth innovante, de la modélisation jusqu'à la fabrication.
         </p>
         <div class="skills-container">
             <span class="skill-badge">Gestion de projet</span>
+            <span class="skill-badge">Travail d'équipe</span>
             <span class="skill-badge">CAO</span>
             <span class="skill-badge">Acoustique</span>
+            <span class="skill-badge">Electronique</span>
         </div>
     </div>
 </section>
 
 <section>
-    <h2>2. Étude Technique & CAO</h2>
+    <h2>2.CAO</h2>
     <div class="content-block">
-        <h3>Calculs Acoustiques</h3>
+        <h3>Calculs et dimensionnement Acoustiques</h3>
         <p>
-            Pour garantir une réponse en fréquence de qualité, le volume interne a été dimensionné selon le principe du <strong>Bass-Reflex</strong>. Les calculs ont été vérifiés via les outils de référence (Pétoin Dominique) pour accorder l'évent à la fréquence de résonance du haut-parleur.
+            Le volume interne a été dimensionné selon le principe du Bass-Reflex. Les calculs ont été vérifiés via les outils de référence (Dome acoustique) pour accorder l'évent à la fréquence de résonance du haut-parleur.
+            Le bass reflex a été accordé à une fréquence de 78Hz.
         </p>
         
         <div class="figure">
             <img src="screenSDW.png" alt="Modélisation SolidWorks">
-            <figcaption>Figure 1 : Modélisation du châssis principal sous SolidWorks - Vue en coupe.</figcaption>
+            <figcaption>Figure 1 : Modélisation du châssis principal sous SolidWorks.</figcaption>
         </div>
 
         <h3>Innovation Design</h3>
         <p>
-            L'originalité du projet réside dans l'intégration d'une <strong>pièce de diffusion conique</strong>. Ce composant permet de transformer une source directionnelle en une diffusion omnidirectionnelle (360°).
+            L'originalité du projet réside dans l'intégration d'une pièce de diffusion conique permettant la diffusion du son à 360°.<BR>
+            Ce composant permet de transformer une source directionnelle en une diffusion omnidirectionnelle (360°).
         </p>
 
         <div class="figure">
@@ -167,14 +171,17 @@
 
 
 <section>
-    <h2>3. Fabrication & Slicing</h2>
+    <h2>3. Impression 3D & Slicing</h2>
     <div class="content-block">
         <p>
-            Le passage du modèle virtuel au monde réel a été réalisé par <strong>Impression 3D (FDM)</strong>. 
+            L'impression 3D a été effectuée sur les imprimantes 3D Bambu Lab disponibles à l'ENSIM.
+            - Matériau : PLA et ABS en fonction de la disponibilité <BR>  
+            - Finition : Ponçage + Peinture  <BR>
+            - Logiciel : Parametrages du slicer pour oprimisation du temps d'impréssion<BR> 
         </p>
         <ul>
             <li><strong>Optimisation :</strong> Réglage du <em>remplissage (infill)</em> à 20% en motif gyroïde pour allier légèreté et rigidité structurelle.</li>
-            <li><strong>Matériau :</strong> Utilisation du PLA pour sa stabilité dimensionnelle.</li>
+            <li><strong>Matériau :</strong> Préférence pour l'utilisation du PLA pour ses capacités à être recyclées</li>
         </ul>
         <div class="figure">
             <img src="SceenBambu.png" alt="Slicing Bambu Studio">
@@ -187,13 +194,18 @@
     <h2>4. Bilan & Développement Web</h2>
     <div class="content-block">
         <p>
-            En complément de la partie ingénierie, ce projet a été l'occasion d'initier une démarche de <strong>documentation numérique</strong> :
+            En complément de la partie ingénierie, ce projet a été l'occasion d'initier une démarche de codage de page HTML :
         </p>
         <ul>
-            <li>Apprentissage du langage <strong>HTML5/CSS3</strong> pour la création de ce portfolio.</li>
-            <li>Utilisation de <strong>GitHub</strong> pour l'hébergement et le versionnage du projet.</li>
-            <li>Interaction avec des outils d'<strong>IA (Gemini)</strong> pour l'aide au débogage et l'optimisation du code.</li>
+            <li>Apprentissage du langage HTML5/CSS3pour la création de ce portfolio.</li>
+            <li>Utilisation de <strong>GitHub</strong> pour l'hébergement et le versionnage de ce portfolio</li>
+            <li>Interaction avec des outils d'IA (Gemini) pour l'aide au débogage et l'optimisation du code.</li>
         </ul>
+
+        <div class="figure">
+            <img src="screenSDW2.png" alt="Détail Diffuseur">
+            <figcaption>Figure 2 : Conception du diffuseur acoustique supérieur.</figcaption>
+        </div>
     </div>
 </section>
 
